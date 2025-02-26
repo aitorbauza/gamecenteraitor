@@ -1,0 +1,318 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo2048">
+
+    <!-- Encabezado con título -->
+    <ImageView
+        android:id="@+id/encabezado"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:padding="16dp"
+        android:src="@drawable/a2048logo"
+        app:tint="#D9CA8E"/>
+
+    <TextView
+        android:id="@+id/normal_level_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:text="NORMAL"
+        android:textColor="#c1a35f"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="center" />
+
+    <ImageButton
+        android:id="@+id/info_button"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignRight="@+id/encabezado"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="17dp"
+        android:scaleType="centerInside"
+        android:background="@drawable/borde_info"
+        android:src="@drawable/ic_info"
+        app:tint="#FFD700" />
+
+    <!-- Contadores de puntuación -->
+    <LinearLayout
+        android:id="@+id/score_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/encabezado"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:layout_marginTop="25dp">
+
+        <!-- Contador de Score -->
+        <TextView
+            android:id="@+id/score"
+            android:layout_width="150dp"
+            android:layout_height="65dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/borde_info"
+            android:padding="8dp"
+            android:text="SCORE\n0"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:lineSpacingExtra="2dp" />
+
+        <!-- Contador de Best -->
+        <TextView
+            android:id="@+id/best"
+            android:layout_width="150dp"
+            android:layout_height="65dp"
+            android:background="@drawable/borde_info"
+            android:padding="8dp"
+            android:text="BEST\n0"
+            android:textColor="#c1a35f"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:lineSpacingExtra="2dp" />
+
+    </LinearLayout>
+
+    <!-- Tablero -->
+    <GridLayout
+        android:id="@+id/tablero"
+        android:layout_width="389dp"
+        android:layout_height="389dp"
+        android:layout_centerInParent="true"
+        android:columnCount="4"
+        android:rowCount="4"
+        android:orientation="horizontal"
+        android:color="#756452">
+
+        <!-- Fila 1 -->
+
+        <TextView
+            android:id="@+id/celda00"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_row="0"
+            android:layout_rowWeight="1"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:background="#CDC1B4"
+            android:gravity="center"
+            android:textColor="#c1a35f"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/celda01"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:background="#CDC1B4"
+            android:gravity="center"
+            android:textColor="#312D27"
+            android:textSize="24sp"/>
+
+        <TextView
+            android:id="@+id/celda02"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:background="#CDC1B4"
+            android:gravity="center"
+            android:textColor="#776E65"
+            android:textSize="24sp"/>
+
+        <TextView
+            android:id="@+id/celda03"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:background="#CDC1B4"
+            android:gravity="center"
+            android:textColor="#776E65"
+            android:textSize="24sp"/>
+
+        <!-- Fila 2 -->
+        <TextView
+            android:id="@+id/celda10"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:background="#CDC1B4"
+            android:gravity="center"
+            android:textColor="#776E65"
+            android:textSize="24sp"/>
+
+        <TextView
+            android:id="@+id/celda11"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:background="#CDC1B4"
+            android:gravity="center"
+            android:textColor="#776E65"
+            android:textSize="24sp"/>
+
+        <TextView
+            android:id="@+id/celda12"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:background="#CDC1B4"
+            android:gravity="center"
+            android:textColor="#776E65"
+            android:textSize="24sp"/>
+
+        <TextView
+            android:id="@+id/celda13"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:background="#CDC1B4"
+            android:gravity="center"
+            android:textColor="#776E65"
+            android:textSize="24sp"/>
+
+        <!-- Fila 3 -->
+        <TextView
+            android:id="@+id/celda20"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:background="#CDC1B4"
+            android:gravity="center"
+            android:textColor="#776E65"
+            android:textSize="24sp"/>
+
+        <TextView
+            android:id="@+id/celda21"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:background="#CDC1B4"
+            android:gravity="center"
+            android:textColor="#776E65"
+            android:textSize="24sp"/>
+
+        <TextView
+            android:id="@+id/celda22"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:background="#CDC1B4"
+            android:gravity="center"
+            android:textColor="#776E65"
+            android:textSize="24sp"/>
+
+        <TextView
+            android:id="@+id/celda23"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:background="#CDC1B4"
+            android:gravity="center"
+            android:textColor="#776E65"
+            android:textSize="24sp"/>
+
+        <!-- Fila 4 -->
+        <TextView
+            android:id="@+id/celda30"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:background="#CDC1B4"
+            android:gravity="center"
+            android:textColor="#776E65"
+            android:textSize="24sp"/>
+
+        <TextView
+            android:id="@+id/celda31"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:background="#CDC1B4"
+            android:gravity="center"
+            android:textColor="#776E65"
+            android:textSize="24sp"/>
+
+        <TextView
+            android:id="@+id/celda32"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:background="#CDC1B4"
+            android:gravity="center"
+            android:textColor="#776E65"
+            android:textSize="24sp"/>
+
+        <TextView
+            android:id="@+id/celda33"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:background="#CDC1B4"
+            android:gravity="center"
+            android:textColor="#776E65"
+            android:textSize="24sp"/>
+    </GridLayout>
+
+    <!-- Botones debajo del tablero -->
+    <LinearLayout
+        android:id="@+id/button_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tablero"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp">
+
+        <!-- Botón NEW GAME -->
+        <Button
+            android:id="@+id/newgame_button"
+            android:layout_width="170dp"
+            android:layout_height="65dp"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="#2D2D2D"
+            android:text="NEW GAME"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:cornerRadius="100dp"
+            app:strokeColor="#c1a35f"
+            app:strokeWidth="3dp" />
+
+        <!-- Botón RETURN PLAY -->
+        <Button
+            android:id="@+id/returnplay_button"
+            android:layout_width="170dp"
+            android:layout_height="65dp"
+            android:backgroundTint="#2D2D2D"
+            android:text="RETURN PLAY"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:cornerRadius="100dp"
+            app:strokeColor="#c1a35f"
+            app:strokeWidth="3dp" />
+    </LinearLayout>
+</RelativeLayout>

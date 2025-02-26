@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">formularios</string>
+    <string-array name="games_array">
+        <item>2048</item>
+        <item>Breakout</item>
+    </string-array>
+</resources>

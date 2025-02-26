@@ -1,0 +1,17 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <bitmap
+            android:src="@drawable/goldsquare"
+            android:gravity="center" />
+    </item>
+    <item>
+        <shape>
+            <corners android:radius="0dp"/>
+
+            <stroke
+                android:width="3dp"
+                android:color="#c1a35f" />
+
+        </shape>
+    </item>
+</layer-list>

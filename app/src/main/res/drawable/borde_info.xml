@@ -1,0 +1,5 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#000000" /> <!-- Fondo del botón -->
+    <stroke android:width="3dp" android:color="#c1a35f" /> <!-- Borde circular -->
+    <corners android:radius="50dp" /> <!-- Hace que sea circular -->
+</shape>

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context=".GamesActivity">
+
+    <TextView
+        android:id="@+id/textViewWelcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="¡WELCOME !"
+        android:textColor="#c1a35f"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CHOOSE A GAME"
+            android:textColor="#c1a35f"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="30dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:weightSum="2"
+            android:layout_marginBottom="20dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="8dp">
+
+                <ImageButton
+                    android:id="@+id/buttonGameOne"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:background="@drawable/a2048square"
+                    android:scaleType="fitCenter"
+                    android:padding="20dp"
+                    android:contentDescription="Juego 1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2048"
+                    android:textColor="#c1a35f"
+                    android:textStyle="bold"
+                    android:layout_marginTop="8dp"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="8dp">
+
+                <ImageButton
+                    android:id="@+id/buttonGameTwo"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:background="@drawable/breakoutsquare"
+                    android:scaleType="fitCenter"
+                    android:padding="20dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="BREAKOUT"
+                    android:textColor="#c1a35f"
+                    android:textStyle="bold"
+                    android:layout_marginTop="8dp"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginTop="30dp">
+
+            <ImageButton
+                android:id="@+id/buttonStats"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/bordeedittext"
+                android:scaleType="fitCenter"
+                android:padding="20dp"
+                android:src="@drawable/ic_stats"
+                android:alpha="0.5" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="STATS"
+                android:textColor="#c1a35f"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp"
+                android:textSize="14sp" />
+
+            <!-- Nuevo botón EXIT GAME -->
+            <ImageButton
+                android:id="@+id/buttonExitGame"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/bordeedittext"
+                android:scaleType="fitCenter"
+                android:padding="20dp"
+                android:src="@drawable/ic_exitgame"
+                android:alpha="0.5"
+                android:layout_marginTop="16dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="EXIT GAME"
+                android:textColor="#c1a35f"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabUsers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:backgroundTint="#c1a35f"
+        android:src="@drawable/ic_user"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:tint="#FFFFFF" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

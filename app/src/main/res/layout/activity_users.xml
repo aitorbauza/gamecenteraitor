@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#000000">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#100F0F"
+        app:titleTextColor="#c1a35f"
+        android:text="AITOR BAUZA PROJECT"
+        android:elevation="4dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="USERS ONLINE"
+        android:textColor="#c1a35f"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:padding="16dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#c1a35f"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"/>
+
+    <ListView
+        android:id="@+id/listViewUsers"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="#333333"
+        android:dividerHeight="1dp"
+        android:padding="16dp"
+        android:background="#0c0c0c"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="The current user looks golden"
+        android:textColor="#777777"
+        android:textStyle="italic"
+        android:gravity="center"
+        android:padding="8dp"
+        android:textSize="12sp"/>
+
+</LinearLayout>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondobreakout2">
+
+    <!-- Encabezado con título -->
+    <ImageView
+        android:id="@+id/encabezado"
+        android:layout_width="match_parent"
+        android:layout_height="85dp"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:padding="16dp"
+        android:src="@drawable/breakoutlogo" />
+
+    <TextView
+        android:id="@+id/normal_level_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:text="HARD"
+        android:textColor="#c1a35f"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:gravity="center" />
+
+    <ImageButton
+        android:id="@+id/info_button"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignRight="@+id/encabezado"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="17dp"
+        android:scaleType="centerInside"
+        android:background="@drawable/borde_infopause"
+        android:src="@drawable/ic_info"
+        app:tint="#FFD700" />
+
+    <ImageButton
+        android:id="@+id/pause_button"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignLeft="@+id/encabezado"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="17dp"
+        android:scaleType="centerInside"
+        android:background="@drawable/borde_infopause"
+        android:src="@drawable/ic_pause"
+        app:tint="#FFD700" />
+
+    <!-- Contadores de puntuación -->
+    <LinearLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/encabezado"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/score"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/bordeedittext"
+            android:gravity="center"
+            android:lineSpacingExtra="2dp"
+            android:padding="8dp" />
+
+        <TextView
+            android:id="@+id/timer"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/bordeedittext"
+            android:gravity="center"
+            android:lineSpacingExtra="2dp"
+            android:padding="8dp" />
+    </LinearLayout>
+
+    <!-- Vista del juego -->
+    <com.example.formularios.BreakoutHardActivity
+        android:id="@+id/gameView"
+        android:layout_width="match_parent"
+        android:layout_height="650dp"
+        android:layout_alignTop="@+id/container"
+        android:layout_marginTop="10dp" />
+
+    <!-- Botones debajo del tablero -->
+    <LinearLayout
+        android:id="@+id/button_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/gameView"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal">
+
+        <!-- Botón NEW GAME -->
+        <Button
+            android:id="@+id/newgame_button"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:backgroundTint="#2D2D2D"
+            android:text="NEW GAME"
+            android:textColor="#EDEAE5"
+            android:layout_marginTop="10dp"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:cornerRadius="10dp"
+            app:strokeColor="#c1a35f"
+            app:strokeWidth="4dp" />
+    </LinearLayout>
+</RelativeLayout>
